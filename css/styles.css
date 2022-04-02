@@ -3,6 +3,9 @@
   --preta: #141414;
   --branca: #ffffff;
   --cinza: #aaaaaa;
+  --swiper-theme-color: #ffffff;
+  --swiper-pagination-bullet-inactive-color: #aaaaaa;
+  --swiper-pagination-bullet-inactive-opacity: #aaaaaa;
 }
 
 /* reset basico dos estilos */
@@ -122,4 +125,29 @@ header .container {
 .filme-principal__conteudo__links__botao:hover {
   color: var(--preta);
   background-color: #ffffff;
+}
+
+/* Fim banner e conteudo principal */
+
+/* swiper carrosel */
+
+.swiper {
+  width: 100%;
+  height: 530px;
+  background-color: var(--preta);
+}
+
+.swiper-slide.wrapper__item {
+  max-width: 330px;
+  height: 90%;
+  margin: 5px 5px 0 5px;
+}
+
+.wrapper__item img {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-pagination {
+  color: var(--branca);
 }
