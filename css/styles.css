@@ -1,0 +1,61 @@
+:root {
+  --vermelho: #e50914;
+  --preta: #141414;
+  --branca: #ffffff;
+  --cinza: #aaaaaa;
+}
+
+/* reset dos estilos */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* estilos gerais */
+
+.container {
+  width: 95%;
+  display: block;
+  margin: 0 auto;
+}
+
+body {
+  background: var(--preta);
+  font-family: "Arial", Times, serif;
+  color: white;
+}
+
+/* header */
+
+header .logo {
+  color: var(--vermelho);
+  font-family: "Arial Black", Times;
+  font-size: 40px;
+  text-transform: uppercase;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu {
+  display: flex;
+}
+
+.menu__link {
+  margin-right: 10px;
+  color: var(--cinza);
+  text-decoration: none;
+  transition: all 0.5s;
+}
+
+.menu__link:hover {
+  color: var(--branca);
+}
+
+.menu__link:last-child {
+  margin-right: 0px;
+}
