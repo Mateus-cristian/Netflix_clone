@@ -5,7 +5,7 @@
   --cinza: #aaaaaa;
 }
 
-/* reset dos estilos */
+/* reset basico dos estilos */
 * {
   margin: 0;
   padding: 0;
@@ -58,4 +58,68 @@ header .container {
 
 .menu__link:last-child {
   margin-right: 0px;
+}
+
+/* Fim do header */
+
+/* banner e conteudo principal */
+
+.filme-principal {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) 100%),
+    url("/img/capa-house.jpg");
+  height: 400px;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.filme-principal .container {
+  height: 85%;
+  display: flex;
+  align-items: flex-end;
+}
+
+.filme-principal__conteudo {
+  display: flex;
+  flex-direction: column;
+}
+
+.filme-principal__conteudo__titulo {
+  font-size: 2.5rem;
+  color: var(--branca);
+  text-transform: uppercase;
+  font-family: "Trebuchet MS", Arial, sans-serif;
+}
+
+.filme-principal__conteudo__descricao {
+  color: var(--branca);
+  max-width: 500px;
+  font-weight: 500;
+  margin-top: 10px;
+  margin-bottom: 40px;
+}
+
+.filme-principal__conteudo__links {
+  display: flex;
+  column-gap: 20px;
+}
+
+.filme-principal__conteudo__links__botao {
+  display: flex;
+  cursor: pointer;
+  column-gap: 10px;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  font-size: 0.75rem;
+  color: var(--branca);
+  padding: 15px 30px;
+  border: none;
+  transition: all 0.4s;
+}
+
+.filme-principal__conteudo__links__botao:hover {
+  color: var(--preta);
+  background-color: #ffffff;
 }
