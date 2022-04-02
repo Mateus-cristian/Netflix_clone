@@ -31,6 +31,10 @@ body {
 
 /* header */
 
+header {
+  position: relative;
+}
+
 header .logo {
   color: var(--vermelho);
   font-family: "Arial Black", Times;
@@ -43,6 +47,8 @@ header .container {
   justify-content: space-between;
   align-items: center;
 }
+
+/* menu desktop */
 
 .menu {
   display: flex;
@@ -61,6 +67,87 @@ header .container {
 
 .menu__link:last-child {
   margin-right: 0px;
+}
+
+@media (max-width: 800px) {
+  .menu {
+    display: none;
+  }
+}
+
+/* menu mobile */
+
+.menu-hamburguer {
+  display: none;
+}
+
+@media (max-width: 800px) {
+  .menu-hamburguer {
+    /* criando a linha do meio e centralizando o menu */
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    color: white;
+    margin-top: 15px;
+    border-top: 4px solid;
+
+    cursor: pointer;
+    z-index: 10;
+  }
+  /* criando a linha superior e inferior */
+  .menu-hamburguer::after,
+  .menu-hamburguer::before {
+    content: "";
+    display: block;
+    height: 4px;
+    margin-top: 6px;
+    background: currentColor;
+    position: relative;
+    transition: transform 0.2s ease;
+  }
+  /* função que rotaciona o menu */
+  .menu-hamburguer:hover {
+    border-top-color: transparent;
+  }
+  .menu-hamburguer:hover::after {
+    margin-top: 0px;
+    top: 2px;
+    transform: rotate(45deg);
+  }
+  .menu-hamburguer:hover::before {
+    margin-top: 0px;
+    top: 6px;
+    transform: rotate(135deg);
+  }
+}
+
+.menu-hamburguer__lateral {
+  display: none;
+}
+
+.menu-hamburguer__lateral.ativo {
+  top: 55px;
+  right: -30px;
+  position: absolute;
+  height: 100vh;
+  width: 50%;
+  gap: 20px 0;
+  background-color: var(--preta);
+  flex-direction: column;
+  padding: 10px 20px 0;
+  display: flex;
+  z-index: 5;
+}
+
+.menu-hamburguer__lateral.ativo .menu__link {
+  color: var(--branca);
+}
+
+@media (max-width: 600px) {
+  .menu-hamburguer__lateral.ativo {
+    width: 107%;
+    padding: 40px 28px 0;
+  }
 }
 
 /* Fim do header */
@@ -135,6 +222,8 @@ header .container {
   width: 100%;
   height: 530px;
   background-color: var(--preta);
+  position: relative;
+  z-index: 15;
 }
 
 .swiper-slide.wrapper__item {
@@ -151,3 +240,5 @@ header .container {
 .swiper-pagination {
   color: var(--branca);
 }
+
+/* Fim swiper carrosel */

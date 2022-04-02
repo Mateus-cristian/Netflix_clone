@@ -10,3 +10,22 @@
     wrapper.appendChild(div);
   }
 })();
+
+(function menuHamburguer() {
+  const btnAtivaMenu = document.querySelector(".menu-hamburguer");
+  const menuLateral = document.querySelector(".menu-hamburguer__lateral");
+
+  btnAtivaMenu.addEventListener("click", function (event) {
+    event.preventDefault();
+    menuLateral.classList.toggle("ativo");
+  });
+
+  window.addEventListener("click", function (event) {
+    if (
+      event.target.className != "menu__link" &&
+      event.target.className != "menu-hamburguer"
+    ) {
+      menuLateral.classList.remove("ativo");
+    }
+  });
+})();
